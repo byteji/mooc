@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Certifications;
+use App\User;
 use Illuminate\Http\Request;
+ 
+use Validator;
+use Hash;
+use Auth;
+ 
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
-class CertificationsController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +48,10 @@ class CertificationsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Certifications  $certifications
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Certifications $certifications)
+    public function show(User $user)
     {
         //
     }
@@ -52,10 +59,10 @@ class CertificationsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Certifications  $certifications
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Certifications $certifications)
+    public function edit(User $user)
     {
         //
     }
@@ -64,10 +71,10 @@ class CertificationsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Certifications  $certifications
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Certifications $certifications)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -75,10 +82,10 @@ class CertificationsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Certifications  $certifications
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Certifications $certifications)
+    public function destroy(User $user)
     {
         //
     }
