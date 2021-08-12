@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -9,8 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
-
+    <title>{{ config('app.name', 'MOOC') }} - @yield('title')</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +16,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/date-1.1.0/datatables.min.css" />
+
+
 </head>
 
 <body>
@@ -25,10 +27,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    MOOC
+                    {{ config('app.name', 'Laravel') }}
                 </a>
-                <a class="nav-link" href="{{ url('/subject') }}">subject
-                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -57,25 +57,16 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->first_name }} <span class="caret"></span>
+                                {{ Auth::user()->name }}
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
-                                style="text-transform:capitalize;">
-                                <a class="dropdown-item" href="{{ url('account')}}">account</a>
-
-                                @role('admin')
-                                <a class="dropdown-item" href="{{ url('admin/user')}}">admin panel</a>
-                                @endrole
-                                <a class="dropdown-item" href="{{ url('home')}}">my subject</a>
-
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                             </div>
@@ -87,40 +78,31 @@
         </nav>
 
         <main class="py-4">
-
-            @role('admin')
-
-            <div class="container mt-3 shadow-lg p-3 mb-3 bg-white rounded-lg">
-                <nav class="navbar navbar-expand-lg  ">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto" style="text-transform:capitalize;">
-                            <li class="nav-item" >
-                                <a class="nav-link" href="{{ url('admin/user')}}">user</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('admin/subject')}}">subject</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('user')}}">chat</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            @endrole
             @yield('content')
-        </main>
-        <main class="py-4">
-            @yield('content2')
         </main>
     </div>
 
 
+
     <!-- Scripts -->
+
     <script src="{{ asset('js/app.js') }}"></script>
 
-    @stack('page_script')
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-colvis-1.7.1/b-html5-1.7.1/b-print-1.7.1/date-1.1.0/datatables.min.js">
+    </script>
+
+    @stack('page_script')
 
 </body>
 

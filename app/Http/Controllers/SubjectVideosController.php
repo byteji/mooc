@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\subject_videos;
+use App\SubjectVideos;
 use Illuminate\Http\Request;
 
 class SubjectVideosController extends Controller
@@ -14,8 +14,7 @@ class SubjectVideosController extends Controller
      */
     public function index()
     {
-        return view('subject_video');
-
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class SubjectVideosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\subject_videos  $subject_videos
+     * @param  \App\SubjectVideos  $subjectVideos
      * @return \Illuminate\Http\Response
      */
-    public function show(subject_videos $subject_videos)
+    public function show(SubjectVideos $subjectVideos)
     {
         //
     }
@@ -53,10 +52,10 @@ class SubjectVideosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\subject_videos  $subject_videos
+     * @param  \App\SubjectVideos  $subjectVideos
      * @return \Illuminate\Http\Response
      */
-    public function edit(subject_videos $subject_videos)
+    public function edit(SubjectVideos $subjectVideos)
     {
         //
     }
@@ -65,10 +64,10 @@ class SubjectVideosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\subject_videos  $subject_videos
+     * @param  \App\SubjectVideos  $subjectVideos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, subject_videos $subject_videos)
+    public function update(Request $request, SubjectVideos $subjectVideos)
     {
         //
     }
@@ -76,10 +75,10 @@ class SubjectVideosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\subject_videos  $subject_videos
+     * @param  \App\SubjectVideos  $subjectVideos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(subject_videos $subject_videos)
+    public function destroy(SubjectVideos $subjectVideos)
     {
         //
     }

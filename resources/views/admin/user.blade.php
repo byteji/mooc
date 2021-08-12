@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'admin-users')
+@section('title', 'admin-user')
 
 @section('content')
+
 
 <div class="container mt-3 shadow-lg p-3 mb-3 bg-white rounded-lg">
     <div class="col-4">
@@ -99,159 +100,8 @@
 
 @endsection
 
-
-
-
 @push('page_script')
 <script>
-    $(document).ready(function()
-{
-    var table = $('#users_datatable').DataTable(
-    {
-      // dom: 'Bfrtip',
-      //   buttons: [
-      //       'copyHtml5',
-      //      'excelHtml5',
-      //       'csvHtml5',
-      //       'pdfHtml5'
-      //   ],
-        
-        processing: true,
-        serverSide: true,
-        responsive: true,
-        
-        
-        "ajax": "{{ route('admin.get_user_all')}}", 
-        "columns": [
-        {
-        data: 'id',
-        name: 'id'
-        },
-        {
-        data: 'title',
-        name: 'title'
-        },
-        {
-        data: 'first_name',
-        name: 'first_name'
-        },
-        {
-        data: 'last_name',
-        name: 'last_name'
-        },
-        {
-        data: 'description',
-        name: 'description'
-        },
-        {
-        data: 'email',
-        name: 'email'
-        },
-        {
-        data: 'role_id',
-        name: 'role_id'
-        },
-        {
-        data: 'created_at',
-        name: 'created_at'
-        } ,
-        {
-        data: 'action',
-        name: 'action'
-        }],
-    });
-});
-
- 
-
-$('#app_form').on('submit', function(event)
-{
-    event.preventDefault(); 
-    var action_url = "{{ route('admin.user.update') }}"; 
-
-    var description = $("#user_description_text").val(); 
-    $('#user_description').val(description); 
-    console.log($(this).serialize());
-
-    $.ajax(
-    {
-        url: action_url,
-        method: "POST",
-        data: $(this).serialize(),
-        dataType: "json",
-        success: function(data)
-        {
-            var html = '';
-            if (data.errors)
-            {
-                html = '<div class="alert alert-danger">';
-                for (var count = 0; count < data.errors.length; count++)
-                {
-                    html += '<p>' + data.errors[count] + '</p>';
-                }
-                html += '</div>';
-            }
-            if (data.success)
-            {
-                html = '<div class="alert alert-success">' + data.success + '</div>';
-                 $('#users_datatable').DataTable().ajax.reload();  
-               
-            }
-            $('#form_result').html(html); 
-        }
-    });
-});
-
-  
-$(document).on('click', '.edit', function()
-{
-    var id = $(this).attr('id');
-    $('#form_result').html('');
-    $.ajax(
-    {
-        url: "/admin/user/" + id + "/edit",
-        dataType: "json",
-        success: function(data)
-        {
-           console.log(data);
-        $('#user_id').val(data.result.id);
-        $('#user_title').val(data.result.title);
-        $('#user_first_name').val(data.result.first_name);
-        $('#user_last_name').val(data.result.last_name);
-        $('#user_description_text').val(data.result.description);
-        $('#user_email').val(data.result.email);
-        $('.modal-title').text('Edit user : '+data.result.first_name+' '+data.result.last_name);
-        $('#user_role').val(data.result.role_id);
-        // $('#type_submit_button').val('edit');                  
-        $('#hidden_id').val(id);
-        $('#staticBackdrop').modal('show');
-        }
-    })
-    
-});
- 
-
-$(document).on('click', '.delete', function() {
-    
-    var id = $(this).attr('id');
-    if (confirm("!! Confirm to delete user id : "+id+" !!")) {
-   
-            $.ajax(
-            {
-                url: "/admin/user/destroy/" + id,
-                
-                success: function(data)
-                { 
-                    $('#users_datatable').DataTable().ajax.reload();
-                }
-            })
-  } else { 
-      
-  }
-
-});
- 
-
 
 </script>
 @endpush

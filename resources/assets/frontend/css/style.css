@@ -1,0 +1,636 @@
+/* Table Of Content */
+
+/*
+1. Section Settings
+2. Section Navbar
+3. Section Carousel
+4. Section Blog
+5.Section  subject
+ -Section  subject  details
+6.Section Testimonials
+7. Section Footer
+8. Section login
+9.
+_______________________
+
+
+
+*/
+
+/* Section Settings */
+
+html,
+body {
+    height: 100%;
+    font-family: "Prompt", sans-serif;
+}
+
+.bg-alpha {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.border-short-bottom {
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 25px;
+}
+
+.border-short-bottom::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50px;
+    background: #595959;
+}
+
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 2.5rem;
+    }
+}
+/* Section Navbar */
+
+#navbar {
+    padding: 5px;
+    transition: 0.5s;
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 0.8rem;
+        line-height: 2rem;
+    }
+}
+
+#navbarsearch {
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Section Carousel */
+
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-inner .active {
+    height: 100%;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+}
+
+.carousel-caption {
+    top: 40%;
+}
+
+.backscreen {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+/* jarallax fort */
+.ja {
+    background-color: #000;
+    filter: alpha(opacity= "1");
+    opacity: 0.8;
+}
+
+/* Section Blog  warpper-card */
+
+.warpper-card-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.warpper-card-img::after {
+    content: "";
+    padding-top: 56.25%;
+    display: block;
+    height: 0;
+}
+
+.warpper-card-img img {
+    position: absolute;
+    top: 0;
+    transition: 1s;
+}
+
+.warpper-card-img img:hover {
+    transform: scale(1.2);
+}
+
+.btn-group-custom button {
+    margin-bottom: 0.5rem;
+    width: 100px;
+}
+
+.blog-content {
+    padding: 50px 100px;
+    box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+.owl-carousel .card-body {
+    height: 150px;
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .blog-content {
+        padding: 40px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-content {
+        padding: 20px 30px;
+    }
+}
+/* Projects Area css
+============================================================================================ */
+.projects_fillter .filter {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px; }
+    .projects_fillter .filter li {
+      display: inline-block;
+      margin-right: 30px; }
+      .projects_fillter .filter li a {
+        font-size: 13px;
+        font-family: "Roboto", sans-serif;
+        color: #777777; }
+      .projects_fillter .filter li:last-child {
+        margin-right: 0px; }
+      .projects_fillter .filter li.active a {
+        color: #8490ff; }
+
+  .projects_inner {
+    margin-bottom: -30px; }
+
+  .projects_item {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px; }
+    .projects_item:before {
+      content: "";
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 300ms ease; }
+    .projects_item .projects_text {
+      position: absolute;
+      left: 0px;
+      bottom: 30px;
+      padding-left: 30px;
+      padding-right: 30px; }
+      .projects_item .projects_text h4 {
+        font-size: 21px;
+        font-family: "Heebo", sans-serif;
+        font-weight: bold;
+        color: #222222;
+        margin-bottom: 5px;
+        transition: all 300ms linear 0s;
+        text-transform: uppercase;
+        cursor: pointer; }
+      .projects_item .projects_text p {
+        margin-bottom: 0px;
+        font-size: 14px; }
+    .projects_item:hover:before {
+      opacity: 1; }
+    .projects_item:hover .projects_text h4 {
+      background: linear-gradient(to right, #8490ff 0%, #62bdfc 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+
+  /* End Projects Area css
+  ============================================================================================ */
+
+/* Section  subject  details  css
+============================================================================================ */
+.portfolio_details_inner .row {
+    margin-bottom: 65px;
+}
+.portfolio_details_inner p {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.portfolio_details_inner p:last-child {
+    margin-bottom: 0px;
+}
+.portfolio_details_inner .portfolio_right_text {
+    padding-left: 98px;
+}
+.portfolio_details_inner .portfolio_right_text h4 {
+    color: #222222;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+.portfolio_details_inner .portfolio_right_text p {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+.portfolio_details_inner .portfolio_right_text .list li {
+    margin-bottom: 7px;
+    color: #777777;
+    font-weight: normal;
+    font-size: 14px;
+}
+.portfolio_details_inner .portfolio_right_text .list li span {
+    font-size: 14px;
+    color: #222222;
+    font-weight: 500;
+    width: 97px;
+    display: inline-block;
+}
+.portfolio_details_inner .portfolio_right_text .list li:last-child {
+    margin-bottom: 0px;
+}
+.portfolio_details_inner .portfolio_right_text .list li i {
+    color: #f1cd09;
+}
+
+/* End Section  subject  details  css
+============================================================================================ */
+
+/* Testimonials Area css
+============================================================================================ */
+.testimonials_area {
+    background: #f9f9ff;
+}
+.testimonials_area.testi_two {
+    background: #fff;
+}
+.testimonials_area.testi_two .testi_inner {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.testimonials_area.testi_two .owl-item {
+    padding: 20px 0px;
+}
+.testimonials_area.testi_two .testi_item {
+    background: #f9f9ff;
+    border-color: #f9f9ff;
+    transition: all 300ms linear 0s;
+}
+.testimonials_area.testi_two .testi_item:hover {
+    background: #fff;
+    border-color: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1);
+}
+
+.testi_inner .col-lg-3 {
+    vertical-align: middle;
+    align-self: center;
+}
+
+.test_title h2 {
+    color: #222222;
+    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.test_title p {
+    margin-bottom: 0px;
+}
+
+.testi_item {
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    background: #fff;
+    padding: 40px 28px;
+}
+.testi_item p {
+    font-style: italic;
+}
+.testi_item h4 {
+    color: #222222;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.testi_item a {
+    color: #ffc000;
+}
+
+/* End Testimonials Area css
+============================================================================================ */
+
+/* Section Footer */
+
+.semi-footer {
+    background: #2b2b2b;
+    color: #dcdcdc;
+}
+
+.semi-footer a {
+    color: #dcdcdc;
+}
+
+.semi-footer h4 {
+    color: #75c6fc;
+    border-bottom: 1px solid;
+    padding: 10px 0;
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    font-size: 0.7rem;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+/* End Footer Area css
+
+
+/* Section login */
+
+/* container-login */
+.container-login {
+    width: 100vw;
+    height: 100vh;
+ /*  grid-template-columns: repeat(2, 1fr); */
+
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+/*  รุป  */
+.img-login {
+    align-items: center;
+}
+
+.login-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+}
+
+.form-login {
+    width: 380px;
+    height: 480px;
+
+}
+
+
+
+/*  รุป ฟอม */
+
+.login-content img {
+    height: 100px;
+}
+/*  ฟ้อน Login  */
+.login-content h2 {
+    margin: 25x 2;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+/*  ความห่าง อินพุต */
+
+.login-content .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 20px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+/*  ความหห่าง  */
+.login-content .input-div.one {
+    margin-top: 0;
+}
+
+
+/*  ความหห่าง ช่อง พาส Register   */
+.login-content .input-div.two {
+    margin-top: -15px;
+}
+
+/*  ความหห่าง ช่อง อีเมล  Register    */
+.login-content .input-div.two2 {
+    margin-top: -18px;
+}
+
+
+
+/*  ไอคอน i  */
+.i-login {
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*  ไอคอน i  */
+.i-login i {
+    transition: 0.2s;
+}
+
+/*  ความห่างข้างล่าง  */
+.input-div > div {
+    position: relative;
+    height: 50px;
+}
+
+
+/*  แถบเส้น  */
+.input-div:before,
+.input-div:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #38d39f;
+    transition: 0.4s;
+}
+/*  แถบเส้น  */
+.input-div:before {
+    right: 50%;
+}
+/*  แถบเส้น  */
+.input-div:after {
+    left: 50%;
+}
+/* ความกว้างของเส้น */
+.input-div.focus:before,
+.input-div.focus:after {
+    width: 50%;
+}
+
+
+::placeholder {
+    color:#999;
+  }
+
+.input-div.focus > .i-login > i {
+    color: #38d39f;
+}
+
+/*  ขนาดความในช่องอินพุต */
+.input-div > div > input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+/*  ช่องห่างช่องพาส  */
+.input-div.pass {
+    margin-bottom: 4px;
+}
+
+/* Forgot Password?  */
+.a-login {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.a-login:hover {
+    color: #38d39f;
+}
+/* ปุ่ม  */
+.btn-login {
+    display: block;
+    width: 95%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/* ปุ่ม  */
+.btn-login:hover {
+    background-position: right;
+}
+
+@media screen and (max-width: 1050px) {
+    .container-lo {
+        grid-gap: 6rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 290px;
+    }
+
+    .login-content h2 {
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+
+    .img img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-login {
+        grid-template-columns: 1fr;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .login-content {
+        justify-content: center;
+    }
+}
+
+/*------------- Register  ---------- */
+
+/*  ความหห่าง  */
+.register-content .input-div.one {
+    margin-top: 0;
+}
+
+/*  สำคัญ  */
+.form-box {
+    width: 380px;
+    height: 420px;
+
+    margin: 6% auto;
+    background: #ccc1c1;
+    padding: 5px;
+
+     /*   overflow: hidden;  */
+  }
+
+ /*
+
+  .input-group {
+    top: 180px;
+    position: absolute;
+    width: 400px;
+    transition: 0.5s;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+  }
+*/
+
+  .toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+  }
+
+
+
+  #login {
+    left: 100px;
+  }
+
+  #register {
+    left: 450px;
+  }
+
+
+/*---------------------------------------------------- */

@@ -2,21 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\user;
+use App\User;
 use Illuminate\Http\Request;
-
  
-use Illuminate\Support\Str;
-use Redirect;
-use Response;
-use DB;
-use Config;
-use DataTables;
 use Validator;
 use Hash;
 use Auth;
-
-
+ 
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
@@ -27,11 +19,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        abort(404);
+        //
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -40,27 +32,6 @@ class UserController extends Controller
     public function create()
     {
         //
-    }
- 
-    
-    public function getinfo(Request $request)
-    {
-        if ($request->ajax()) {
-
-            $userid = Auth::user()->id;
-            $data = User::all();
-            return datatables()
-            ->of($data)
-            ->addIndexColumn()
-            ->setRowId('{{$id}}')
-            ->addColumn('action', '')
-            ->editColumn('action', 'action_column')
-            ->toJson();
-        }
-         
-        $data_role =Role::all();
-         
-        return view('user_account', compact('data_role'));
     }
 
     /**
@@ -77,85 +48,45 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\user  $user
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(user $user)
+    public function show(User $user)
     {
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\user  $user
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        if (request()->ajax()) {
-            $data = User::findOrFail($id);
-            return response()->json(['result' => $data]);
-        }
+        //
     }
-  
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\User  $user
+     * @return \Illuminate\Http\Response
+     */
     public function update(Request $request, User $user)
     {
-        $rules = array(
-            'user_first_name'           => ['required', 'string'],
-            'user_last_name'            => ['required', 'string'],
-            'user_email'                => ['required', 'string', 'email', 'unique:users,email,'.$request->hidden_id],
-         ); 
-         
-
-        $error = Validator::make($request->all(), $rules);
-        
-        if ($error->fails()) {
-            return response()->json(['errors' => $error->errors()->all()]);
-        }
-
-        if ($request->user_role == 0) {
-            $error->errors()->add('user_role', 'please select role');
-            return response()->json(['errors' => $error->errors()->all()]);
-        }
-     
-        
-        $form_data = array(
-                    'title'         => $request->user_title,
-                    'first_name'    => $request->user_first_name,
-                    'last_name'     => $request->user_last_name,
-                    'description'   => $request->user_description,
-                    'email'         => $request->user_email,
-                    'role_id'       => $request->user_role
-        );
- 
-
-        User::whereId($request->hidden_id)->update($form_data);
-
-        $userId = $request->hidden_id;
-        $this->setRole($request->hidden_id, $request->user_role);
-        return response()->json(['success' => 'Data is successfully updated']);
+        //
     }
 
-    private function setRole($userId, $roleId)
-    {
-        $user=  User::find($userId);
-
-        $roles =  $user->hasAllRoles(Role::all());
-        $user->syncRoles($roles);
-
-
-        $roles =  role::find($roleId);
-        $user->assignRole($roles);
-    }
-     
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\user  $user
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
- 
+        //
     }
 }

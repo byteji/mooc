@@ -12,23 +12,35 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/first', 'FirstRunController@index');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', function () {
     return view('index');
 });
 
-Auth::routes();
-Route::get('/asd', 'HomeController@index');
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
 Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/test', function () {
+Route::get('test', function () {
     return view('test');
 });
+
+Route::get('profile', function () {
+    return view('user-profile');
+});
+
+
+Route::get('my-subject', function () {
+    return view('user-subject');
+});
+ 
 
 Route::prefix('admin')->group(function () {
     Route::name('admin.')->group(function () {
@@ -44,8 +56,6 @@ Route::prefix('admin')->group(function () {
         Route::get('get_subject_all', 'admin\SubjectController@get_subject_all')->name('get_subject_all');
     });
 });
-
-
 
 
 
