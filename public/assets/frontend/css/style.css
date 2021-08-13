@@ -4,6 +4,7 @@
 1.5  Section On to Top
 2. Section Navbar
 3. Section Carousel
+3.5 Section jumbotron
 4. Section Blog
 5.Section  subject
  -Section  subject  details
@@ -27,10 +28,6 @@ _______________________
 #EDF4EF;   ครีมอ่อน
 #FAFFFB;    ขาว */
 
-
-
-
-
 /* Section Settings */
 
 html,
@@ -39,8 +36,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
-    
-    
 }
 
 header{
@@ -54,15 +49,10 @@ header{
     cursor: pointer;
 } */
 
-.center1 {
-    margin: auto;
-    width: 80%;
 
-    padding: 10px;
-}
 
 .bg-alpha {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.781);
     
 }
 
@@ -75,10 +65,10 @@ header{
 .border-short-bottom::after {
     position: absolute;
     content: "";
-    width: 100px;
+    width: 165px;
     height: 2px;
     bottom: 0;
-    left: 50%;
+    left: 47.5%;
     margin-left: -50px;
     background: #595959;
 }
@@ -168,13 +158,11 @@ header{
 .carousel-item,
 .carousel-inner .active {
     height: 100%;
+    margin-top: 38.5px;
 }
 
 .carousel-img {
-    width: 100%;
-    height: 100%;
-
-    /* background-repeat: no-repeat;
+     /* background-repeat: no-repeat;
     background-position: center; */
      width: 100%;
     height: 100%;
@@ -182,6 +170,10 @@ header{
     background-position: center;
 }
 
+/* .carousel-item > img {
+      width: 1920px;
+      height: 400px;		 
+} */
 .carousel-caption {
     top: 40%;
 }
@@ -190,15 +182,34 @@ header{
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
 }
+.carousel1 {
+    margin: auto;
+    width: 90%;
+    padding: 1px;
+}
 
 
-
-/* jarallax fort */
+/* Section jumbotron */
 .ja {
     background-color: #000;
     filter: alpha(opacity= "1");
     opacity: 0.8;
 }
+
+.jumb {
+    font-style: normal;
+     font-size: 38px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   color: #ffffff;
+    background: #2b2b2b;
+}
+
+
+
+
 
 /* Section Blog  warpper-card */
 
@@ -731,24 +742,4 @@ header{
 }
 
 /*---------------------------------------------------- */
-.card1 {
-    position: absolute;
-    width: 319px;
-    height: 345px;
-    left: 184px;
-    top: 927px;
-    color: #ffff;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.jaa {
-    font-style: normal;
-   
-    font-size: 36px;
-    line-height: 44px;
-    display: flex;
-    align-items: center;
-    text-align: center;
 
-    color: #ffffff;
-    background: #2b2b2b;
-}

@@ -512,8 +512,16 @@ mark {
 
 .img-fluid {
     max-width: 100%;
-    height: auto
+    height: auto;
+    /* width: 1920px; */
+  	/* height: 400px;	 */
 }
+/* .img-fluid2 {
+  
+    width: 1920px;
+    height: 400px;	
+  	
+} */
 
 .img-thumbnail {
     padding: .25rem;
@@ -587,6 +595,7 @@ pre code {
     margin-left: auto
 }
 
+
 @media (min-width:576px) {
     .container {
         max-width: 540px
@@ -613,11 +622,37 @@ pre code {
 
 .container-fluid {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
     margin-right: auto;
     margin-left: auto
 }
+
+@media (min-width:576px) {
+    .container-fluidr {
+        max-width: 540px
+    }
+}
+
+@media (min-width:768px) {
+    .container-fluid {
+        max-width: 720px
+    }
+}
+
+@media (min-width:992px) {
+    .container-fluid {
+        max-width: 960px
+    }
+}
+
+@media (min-width:1200px) {
+    .container-fluid {
+        max-width: 1140px
+    }
+}
+
 
 .row {
     display: -ms-flexbox;
@@ -5107,7 +5142,7 @@ input[type=submit].btn-block {
 
 .jumbotron {
     padding: 1rem 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
     background-color: #e9ecef;
     border-radius: .3rem;
     margin-right: 60px;

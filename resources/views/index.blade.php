@@ -10,50 +10,55 @@
 <!--================End Home ส่วนรูป =================-->
 
 <!-- Section Carousel -->
+<div class="container">
 
-<section id="carouselExampleIndicators" class="carousel slide center1  " data-ride="carousel" >
+<section id="myCarousel" class="carousel slide  carousel1  " data-ride="carousel" >
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
-    <div class="carousel-inner  ">
-        <div class="carousel-item active">
+  <div class="carousel-inner  ">
 
-            <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/1.png') }}"
-                alt="First slide">
+        <div class="carousel-item active">
+                  <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/1.png') }}" alt="First slide">
             <div class="backscreen"></div>
         </div>
+        
 <!--- --------------------------------------------------------------------------------->
-    <div class="carousel-item ">
-            <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/2.png') }}" alt="//">
-        </div>
+     <div class="carousel-item ">
+                 <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/2.png') }}" alt="//">
+            <div class="backscreen"></div>
+        </div> 
 <!--- --------------------------------------------------------------------------------->
-    <div class="carousel-item ">
-            <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/3.png') }}" alt="//">
-        </div>
+     <div class="carousel-item ">
+                <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/3.png') }}" alt="//">
+            <div class="backscreen"></div>
+        </div> 
 <!--- --------------------------------------------------------------------------------->
-    </div>
+    </div> <!--  .carousel-inner -->
 
 
-
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+ <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</section>
+   
+
+</section>  
+</div>
 
 <!--  END  Section Carousel -->
 
-<!-- Section Hope -->
+<!-- Section jumbotron -->
 <br>
-<section class="jumbotron  jaa  text-center">
-    <div class="container ">
+<section class="jumbotron  jumb  ">
+    <div class="container-fluid ">
         <h1 class="">CE MOOC </h1>
         <p class=""> เกิดจากอยากให้ทุกคนได้เรียนรู้  </p>
     </div>
@@ -65,7 +70,7 @@
 <!-- Blog -->
  <section class="container">
 
-    <h1 class="border-short-bottom text-center"> ครอส</h1>
+    <h1 class="border-short-bottom text-center"> ครอสเรียนแนะนำ </h1>
     <div class="row">
 
         <section class="col-12 col-sm-6 col-md-4 p-2">
