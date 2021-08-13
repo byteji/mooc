@@ -2540,19 +2540,19 @@ fieldset:disabled a.btn {
 
 .btn-success {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
+    background-color: #41C99B; 
+    border-color: #41C99B; 
 }
 
 .btn-success:hover {
     color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34
+    background-color: #23ac7e;  
+    border-color: #23ac7e;  
 }
 
 .btn-success.focus,
 .btn-success:focus {
-    box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
+    box-shadow: 0 0 0 .2rem rgba(18, 228, 147, 0.733)
 }
 
 .btn-success.disabled,
@@ -2843,26 +2843,26 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success {
-    color: #28a745;
+    color: #41C99B;
     background-color: transparent;
     background-image: none;
-    border-color: #28a745
+    border-color: #41C99B;
 }
 
 .btn-outline-success:hover {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
+    background-color: #34CD99; 
+    border-color: #34CD99; 
 }
 
 .btn-outline-success.focus,
 .btn-outline-success:focus {
-    box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
+    box-shadow: 0 0 0 .2rem rgba(12, 202, 114, 0.63)
 }
 
 .btn-outline-success.disabled,
 .btn-outline-success:disabled {
-    color: #28a745;
+    color: #34CD99; 
     background-color: transparent
 }
 
@@ -2870,14 +2870,14 @@ fieldset:disabled a.btn {
 .btn-outline-success:not(:disabled):not(.disabled):active,
 .show>.btn-outline-success.dropdown-toggle {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
+    background-color: #34CD99;
+    border-color: #34CD99; 
 }
 
 .btn-outline-success:not(:disabled):not(.disabled).active:focus,
 .btn-outline-success:not(:disabled):not(.disabled):active:focus,
 .show>.btn-outline-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
+    box-shadow: 0 0 0 .2rem #41C99B;
 }
 
 .btn-outline-info {
@@ -4223,7 +4223,7 @@ input[type=submit].btn-block {
 
 .navbar-nav .nav-link {
     padding-right: 0;
-    padding-left: 0
+    padding-left: 0;
 }
 
 .navbar-nav .dropdown-menu {
@@ -5106,10 +5106,13 @@ input[type=submit].btn-block {
 }
 
 .jumbotron {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
     background-color: #e9ecef;
-    border-radius: .3rem
+    border-radius: .3rem;
+    margin-right: 60px;
+    margin-left: 60px;
+
 }
 
 @media (min-width:576px) {

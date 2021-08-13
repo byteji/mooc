@@ -5,14 +5,10 @@
     if (scrollTop > 1) {
         $('#navbar').css('padding', '0px 25px')
     } else {
-        $('#navbar').css('padding', '5px')
+        $('#navbar').css('padding', '4px')
     }
 })
-/*   ลูกเล่น to-top  */
-$('.to-top').click(function (){
-    $('html, body').animate({scrollTop: '0px'}, 800);
-})
-/*   END ลูกเล่น to-top  */
+
 
  /*   ไอคอน หน้าหน้าบาร์เมนู*/
 function sideMenu() {
@@ -109,3 +105,8 @@ inputs.forEach(input => {
     }
     projects_isotope();
 /*-----------END isotope ------------*/
+
+/*-----------to-top ------------*/
+$('.to-top').click(function (){
+    $('html, body').animate({scrollTop: '0px'}, 800);
+}) /*----------- END  to-top ------------*/

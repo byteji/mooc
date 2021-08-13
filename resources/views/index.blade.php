@@ -16,33 +16,24 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-
-
-    </ol>
+  </ol>
 
     <div class="carousel-inner  ">
         <div class="carousel-item active">
 
-            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/11.png') }}"
+            <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/1.png') }}"
                 alt="First slide">
             <div class="backscreen"></div>
         </div>
 <!--- --------------------------------------------------------------------------------->
     <div class="carousel-item ">
-            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/12.png') }}" alt="//">
+            <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/2.png') }}" alt="//">
         </div>
 <!--- --------------------------------------------------------------------------------->
     <div class="carousel-item ">
-            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/13.png') }}" alt="//">
+            <img class=" img-fluid" src="{{ asset('assets/frontend/img/carousel/3.png') }}" alt="//">
         </div>
-
 <!--- --------------------------------------------------------------------------------->
-    <div class="carousel-item ">
-            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/14.jpg') }}" alt="F//">
-        </div>
-
-
     </div>
 
 
@@ -356,7 +347,10 @@
 <!--================ เส้นคั่น =================-->
 
 
-
+<!--================ to-top =================-->
+<div class="to-top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </div>
 
 
 
