@@ -1,0 +1,9 @@
+.card1 {
+    position: absolute;
+    width: 319px;
+    height: 345px;
+    left: 184px;
+    top: 927px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

@@ -4098,6 +4098,7 @@ input[type=submit].btn-block {
 
 .nav-link.disabled {
     color: #6c757d
+    
 }
 
 .nav-tabs {
@@ -4133,7 +4134,7 @@ input[type=submit].btn-block {
 }
 
 .nav-tabs .dropdown-menu {
-    margin-top: -1px;
+    margin-top: -2px;
     border-top-left-radius: 0;
     border-top-right-radius: 0
 }
@@ -4145,7 +4146,7 @@ input[type=submit].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #007bff
+    
 }
 
 .nav-fill .nav-item {

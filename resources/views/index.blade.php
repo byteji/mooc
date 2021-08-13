@@ -11,7 +11,7 @@
 
 <!-- Section Carousel -->
 
-<section id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" >
+<section id="carouselExampleIndicators" class="carousel slide center1  " data-ride="carousel" >
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -21,25 +21,25 @@
 
     </ol>
 
-    <div class="carousel-inner">
+    <div class="carousel-inner  ">
         <div class="carousel-item active">
 
-            <img class="carousel-img  img-fluid" src="{{ asset('assets/frontend/img/projects/11.png') }}"
+            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/11.png') }}"
                 alt="First slide">
             <div class="backscreen"></div>
         </div>
 <!--- --------------------------------------------------------------------------------->
     <div class="carousel-item ">
-            <img class="carousel-img  img-fluid" src="{{ asset('assets/frontend/img/projects/12.png') }}" alt="//">
+            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/12.png') }}" alt="//">
         </div>
 <!--- --------------------------------------------------------------------------------->
     <div class="carousel-item ">
-            <img class="carousel-img  img-fluid" src="{{ asset('assets/frontend/img/projects/13.png') }}" alt="//">
+            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/13.png') }}" alt="//">
         </div>
 
 <!--- --------------------------------------------------------------------------------->
     <div class="carousel-item ">
-            <img class="carousel-img  img-fluid" src="{{ asset('assets/frontend/img/projects/14.jpg') }}" alt="F//">
+            <img class=" img-fluid" src="{{ asset('assets/frontend/img/projects/14.jpg') }}" alt="F//">
         </div>
 
 
@@ -61,14 +61,15 @@
 
 <!-- Section Hope -->
 <br>
-<section class="jumbotron text-center">
-    <div class="container">
-        <h1 class="border-short-bottom">ความคาดหวังของผู้สอน</h1>
-        <p class="lead">คาดหวังไว้ว่า จะสอนนักเรียนทุกคน </p>
+<section class="jumbotron  jaa  text-center">
+    <div class="container ">
+        <h1 class="">CE MOOC </h1>
+        <p class=""> เกิดจากอยากให้ทุกคนได้เรียนรู้  </p>
     </div>
 </section>
 
 <!-- END  Section Hope -->
+
 
 <!-- Blog -->
  <section class="container">
@@ -78,10 +79,11 @@
 
         <section class="col-12 col-sm-6 col-md-4 p-2">
             <div class="card h-100">
+                
                 <a href="#" class="warpper-card-img">
                     <img class="card-img-top" src="{{asset('assets/frontend/img/projects/p1.png')}}" alt="Coding">
                 </a>
-                <div class="card-body">
+                <div class="card-body ">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title</p>
                 </div>
@@ -318,7 +320,7 @@
             <section class="col-12 col-sm-6 col-md-4 p-2 brand web ">
 
   <div class="projects_item">
-                <div class="card h-100  ">
+                <div class="card h-100   ">
 
                     <a href="#" class="warpper-card-img  ">
 

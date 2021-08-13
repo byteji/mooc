@@ -135,7 +135,7 @@
 
     
 
-<!--  Js ของ ต่างๆ สำคัญอยู-->
+
   <!--   <script src="{{ asset('assets/frontend/js/theme.js') }}"></script> -->
 
 </body>
