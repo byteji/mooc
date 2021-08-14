@@ -5,9 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-
-    <title>index </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <meta name="description" content="CEMOOC">
+    <meta name="image" content="https://s-courses.com/sclass1/assets/images/bg.jpg">
+    
+    <title>CEMOOCx</title>
     <!-- Bootstrap CSS -->
     <!--  ที่อยู่ public/assets/frontend -->
 

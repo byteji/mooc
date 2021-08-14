@@ -64,10 +64,9 @@
     </div>
 </section> -->
 
-
-<div class="jumbotron   jumb text-center">
- 		<div class="container">
-			<h1 class="jumbotron-heading">CE MOOCx </h1>
+<div class="jumbotron jumb text-center" style ="padding-bottom: 20px;"  >
+ 		<div class="container-fluid">
+			<h1 class="jumbotron-heading" style="color:#f06eaa" >CE MOOCx </h1>
             <p class="lead  "> คอร์สเรียนออนไลน์ฟรี ที่ มหาวิทยาลัยราชภัฎสวนสุนันทา สาขาวิชาวิศกรรมคอมพิวเตอร์ เพราะเราเชื่อว่าทุกคนมีสิทธิที่จะเรียนรู้ และควรจะได้เรียนรู้ตลอดชีวิตมาร่วมกันฝึกทักษะทางความคิด
                                             ความสามารถ และสติปัญญาเพื่อพัฒนาศักยภาพของตนเองได้ที่ <span style="color:#f06eaa" >CEMOOCx</span> </p>
 			<p>
@@ -192,7 +191,7 @@
 
         <div class="text-center">
           
-                 <h3  class="border-short-bottom2  " >  ข่าวสารชาววิศวกรรมคอมสวนสุนันทา  </h3>
+                 <h2  class="border-short-bottom2  " >  ข่าวสารชาววิศวกรรมคอมสวนสุนันทา  </h2>
                  <p >กิจกรรมสาขาวิศวกรรมคอมพิวเตอร์ </p>
               
 
