@@ -47,7 +47,7 @@ $("#indexContent img").css('margin', 'auto');
 /*   END img-responsive ไอคอนฟุตเตอร์ */
 
 
- /*   LOGIN */
+ /*   LOGIN inputs  */
 const inputs = document.querySelectorAll(".input");
 
 
@@ -68,6 +68,17 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
+
+ // ม็อดอัพ
+ $(function() {
+    $('#btnSignin').click(function() {
+        $('#modalSignin').modal();
+    });
+ });
+ 
+
+
+
  /*  END  LOGIN */
 
 /*  Isotope Fillter js แยก หมวดหมูวิชา

@@ -16,7 +16,7 @@
 
              <ul class="navbar-nav ml-auto text-center ">
                <li class="nav-item   "  <?php echo $file_name == 'index' ? 'active': '' ?>" >
-                 <a class="nav-link"   href="#" > หน้าแรก <span class="sr-only">(current)</span></a>
+                 <a class="nav-link"   href="{{ url('/') }}" > หน้าแรก <span class="sr-only">(current)</span></a>
               </li>
                 <li class="nav-item" <?php echo $file_name == '#' ? 'active': '' ?> >
 
@@ -38,12 +38,13 @@
                 <ul class="navbar-nav ml-auto  "  >
                    <li class="nav-item " >
                          <!-- <a href="{{route('login')}}" class="btn btn-outline-success my-2 my-sm-0" role="button">เข้าสู่ระบบ</a> -->
-                    <a href="{{route('login')}}">
-                       <button  type="submit" class= "btn btn-outline-success my-2 my-sm-0" >  เข้าสู่ระบบ </button></li>
-                    </a>
+                    
+                       <!-- <button id="btnSignin" type="submit" class= "btn btn-outline-success my-2 my-sm-0" >  เข้าสู่ระบบ </button></li> -->
+                       <button id="btnSignin" class="btn btn-outline-success my-2 my-sm-0" type="button"> เข้าสู่ระบบ</button>
+                  
                   <li class="nav-item ">
-                   <a href="{{ route('register') }}">
-                      <button  type="submit"  class="btn btn-success my-2 my-sm-0 ">  ลงทะเบียน </button></li>
+                   <a href="{{route('login')}}">
+                      <button   type="submit"  class="btn btn-success my-2 my-sm-0 ">  ลงทะเบียน </button></li>
                     </a>
                 </ul>
 
@@ -52,3 +53,35 @@
     </div>
 
 </nav>
+  
+    <!-- Section log in -->
+    <div id="modalSignin" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">สมาชิกเข้าสู่ระบบ</h5>
+                    <button class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="logi">Login:</label>
+                            <input type="text" id="login" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pswd">Password:</label>
+                            <input type="password" id="pswd" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">เข้าสู่ระบบ</button>
+                    <button class="btn btn-warning">ลืมรหัสผ่าน</button>
+                    <button class="btn btn-success">สมัครสมาชิก</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Section log in -->

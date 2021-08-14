@@ -219,12 +219,12 @@ header{
 
 .jumb {
     font-style: normal;
-     font-size: 40px;
+    font-size: 40px;
     line-height: 45px;
     display: flex;
     align-items: center;
     text-align: center;
-   color: #ffffff;
+    color: #ffffffcc;
     background: #2b2b2b;
 }
 
@@ -509,6 +509,7 @@ header{
     grid-gap: 7rem;
     padding: 0 2rem;
 }
+
 /*  รุป  */
 .img-login {
     align-items: center;
@@ -520,7 +521,6 @@ header{
     align-items: center;
     text-align: center;
 }
-
 .form-login {
     width: 380px;
     height: 480px;
@@ -529,7 +529,7 @@ header{
 /*  รุป ฟอม */
 
 .login-content img {
-    height: 100px;
+    height: 50px;
 }
 /*  ฟ้อน Login  */
 .login-content h2 {
@@ -705,13 +705,10 @@ header{
 }
 
 /*------------- Register  ---------- */
-
 /*  ความหห่าง  */
 .register-content .input-div.one {
     margin-top: 0;
 }
-
-/*  สำคัญ  */
 .form-box {
     width: 380px;
     height: 420px;
@@ -720,19 +717,15 @@ header{
     background: #ccc1c1;
     padding: 5px;
 
-    /*   overflow: hidden;  */
+    
 }
-
-/*
-
-  .input-group {
+/*.input-group {
     top: 180px;
     position: absolute;
     width: 400px;
     transition: 0.5s;
   }
-
-  .input-field {
+ .input-field {
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
@@ -761,6 +754,5 @@ header{
 #register {
     left: 450px;
 }
-
-/*---------------------------------------------------- */
+/* ========================end login& register =============== */
 

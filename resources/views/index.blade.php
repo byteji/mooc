@@ -66,8 +66,8 @@
 
 <div class="jumbotron jumb text-center" style ="padding-bottom: 20px;"  >
  		<div class="container-fluid">
-			<h1 class="jumbotron-heading" style="color:#f06eaa" >CE MOOCx </h1>
-            <p class="lead  "> คอร์สเรียนออนไลน์ฟรี ที่ มหาวิทยาลัยราชภัฎสวนสุนันทา สาขาวิชาวิศกรรมคอมพิวเตอร์ เพราะเราเชื่อว่าทุกคนมีสิทธิที่จะเรียนรู้ และควรจะได้เรียนรู้ตลอดชีวิตมาร่วมกันฝึกทักษะทางความคิด
+			<h1 class="jumbotron-heading font-weight-bold " style="color:#f06eaa" >CE MOOCx </h1>
+            <p class="lead "> คอร์สเรียนออนไลน์ฟรี ที่ มหาวิทยาลัยราชภัฎสวนสุนันทา สาขาวิชาวิศกรรมคอมพิวเตอร์ เพราะเราเชื่อว่าทุกคนมีสิทธิที่จะเรียนรู้ และควรจะได้เรียนรู้ตลอดชีวิตมาร่วมกันฝึกทักษะทางความคิด
                                             ความสามารถ และสติปัญญาเพื่อพัฒนาศักยภาพของตนเองได้ที่ <span style="color:#f06eaa" >CEMOOCx</span> </p>
 			<p>
 				<a href="http://www.ce.fit.ssru.ac.th/page/information" class="btn btn-success my-2"> ประวัติสาขา </a>
@@ -97,7 +97,7 @@
                     <p class="card-text">Some quick example text to build on the card title</p>
                 </div>
                 <div class="p-3">
-                    <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    <a href="#" class="btn btn-success btn-block">อ่านต่อได้ที่</a>
                 </div>
             </div>
         </section>
@@ -112,7 +112,7 @@
                     <p class="card-text">Some quick example text to build on the card title</p>
                 </div>
                 <div class="p-3">
-                    <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    <a href="#" class="btn btn-success btn-block">อ่านต่อได้ที่</a>
                 </div>
             </div>
         </section>
@@ -127,7 +127,7 @@
                     <p class="card-text">Some quick example text to build on the card title</p>
                 </div>
                 <div class="p-3">
-                    <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    <a href="#" class="btn btn-success btn-block">อ่านต่อได้ที่</a>
                 </div>
             </div>
         </section>
@@ -142,7 +142,7 @@
                     <p class="card-text">Some quick example text to build on the card title</p>
                 </div>
                 <div class="p-3">
-                    <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    <a href="#" class="btn btn-success btn-block">อ่านต่อได้ที่</a>
                 </div>
             </div>
         </section>
@@ -157,7 +157,7 @@
                     <p class="card-text">Some quick example text to build on the card title</p>
                 </div>
                 <div class="p-3">
-                    <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    <a href="#" class="btn btn-success btn-block">อ่านต่อได้ที่</a>
                 </div>
             </div>
         </section>
@@ -172,7 +172,7 @@
                     <p class="card-text">Some quick example text to build on the card title</p>
                 </div>
                 <div class="p-3">
-                    <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    <a href="#" class="btn btn-success btn-block">อ่านต่อได้ที่</a>
                 </div>
             </div>
         </section>
@@ -196,6 +196,7 @@
               
 
         </div>
+      
 
         <!-- <div class="row"> -->
 
