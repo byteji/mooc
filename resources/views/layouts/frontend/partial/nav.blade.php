@@ -33,24 +33,18 @@
                 <li class="nav-item" <?php echo $file_name == '#' ? 'active': '' ?> >
                     <a class="nav-link " href="about-us.html"> เกี่ยวกับเรา  </a>
                 </li> 
-
                 </ul>
 
-                
-                  <!--  ปุ่ม -->
-                  <!-- <form class="form-inline my-1">
-          	
-          		<button class="btn btn-outline-success my-2 my-sm-0"  href="{{ route('login') }}" type="submit">เข้าสู่ระบบ </button>
-        		</form> -->
-
                 <ul class="navbar-nav ml-auto  "  >
-
-                    <li class="nav-item   " >
-                      <button class=" btn btn-outline-success my-2 my-sm-0  " href="{{ route('login') }}">  เข้าสู่ระบบ </button></li>
-
-                    <li class="nav-item   ">
-                    <button class=" btn btn-success my-2 my-sm-0  " href="{{ route('register') }}">  ลงทะเบียน </button></li>
-                      <!-- <a class="nav-link  " href="{{ route('register') }}">  ลงทะเบียน </a></li -->
+                   <li class="nav-item " >
+                         <!-- <a href="{{route('login')}}" class="btn btn-outline-success my-2 my-sm-0" role="button">เข้าสู่ระบบ</a> -->
+                    <a href="{{route('login')}}">
+                       <button  type="submit" class= "btn btn-outline-success my-2 my-sm-0" >  เข้าสู่ระบบ </button></li>
+                    </a>
+                  <li class="nav-item ">
+                   <a href="{{ route('register') }}">
+                      <button  type="submit"  class="btn btn-success my-2 my-sm-0 ">  ลงทะเบียน </button></li>
+                    </a>
                 </ul>
 
                 </div>

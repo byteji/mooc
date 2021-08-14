@@ -57,26 +57,12 @@
 
 <!-- Section jumbotron -->
 <br>
-<!-- <section class="jumbotron  jumb  ">
+<section class="jumbotron  jumb  ">
     <div class="container-fluid ">
         <h1 class="">CE MOOC </h1>
         <p class=""> เกิดจากอยากให้ทุกคนได้เรียนรู้  </p>
     </div>
-</section> -->
-
-
-<div class="jumbotron   jumb text-center">
- 		<div class="container">
-			<h1 class="jumbotron-heading">CE MOOCx </h1>
-            <p class="lead  "> คอร์สเรียนออนไลน์ฟรี ที่ มหาวิทยาลัยราชภัฎสวนสุนันทา สาขาวิชาวิศกรรมคอมพิวเตอร์ เพราะเราเชื่อว่าทุกคนมีสิทธิที่จะเรียนรู้ และควรจะได้เรียนรู้ตลอดชีวิตมาร่วมกันฝึกทักษะทางความคิด
-                                            ความสามารถ และสติปัญญาเพื่อพัฒนาศักยภาพของตนเองได้ที่ <span style="color:#f06eaa" >CEMOOCx</span> </p>
-			<p>
-				<a href="http://www.ce.fit.ssru.ac.th/page/information" class="btn btn-success my-2"> ประวัติสาขา </a>
-				<a href="#" class="btn btn-secondary my-2">เกี่ยวกับเรา</a>
-			</p>
-		</div>
- 	</div>
-
+</section>
 
 <!-- END  Section Hope -->
 
@@ -185,41 +171,185 @@
 
 <hr width=80% size=50 color=363636>
 
+<!--================ เส้นคั่น =================-->
+
+<!--================ Course =================-->
+
+<section class="projects_area p_120">
+
+    <div class="container">
+        <h1 class="border-short-bottom text-center"> Course</h1>
+        <h4 class=" text-center"> แสดงวิชาตามหมวดหมู่</h4>
 
 
-<!--================ ข่าวสาร =================-->
-<section class="container">
+        <div class="projects_fillter">
 
-        <div class="text-center">
-          
-                 <h3  class="border-short-bottom2  " >  ข่าวสารชาววิศวกรรมคอมสวนสุนันทา  </h3>
-                 <p >กิจกรรมสาขาวิศวกรรมคอมพิวเตอร์ </p>
-              
+            <ul class="filter list">
+
+                <li class="active" data-filter="*"><a href="">All Course </a></li>
+                <li data-filter=".brand "><a href="">Hardware</a></li>
+                <li data-filter=".work "><a href="">Software </a></li>
+                <li data-filter=".web" ><a href="">Network</a></li>
+            </ul>
 
         </div>
 
-        <!-- <div class="row"> -->
+
+        <div class="projects_inner row ">
+
+            <section class=" col-12 col-sm-6 col-md-4 p-2  web ">
+
+            <div class="projects_item">
+
+                <div class="card h-100  ">
+
+                     <a href="#" class="warpper-card-img  ">
+
+                        <img class=" card-img-top " src="{{asset('assets/frontend/img/projects/p1.png')}}" alt="Coding">
+
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">ไพทอน</h5>
+                        <p class="card-text">มาเรียนกับเรากันเถอะ</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    </div>
+                    </div>
+
+                </div>
 
 
+            </section>
 
- 
+            <!--=========================================================================================================-->
+            <section class="col-12 col-sm-6 col-md-4 p-2  work ">
+
+            <div class="projects_item">
+
+                <div class="card h-100  ">
+
+                    <a href="#" class="warpper-card-img  ">
+
+                        <img class=" card-img-top " src="{{asset('assets/frontend/img/projects/p2.png')}}" alt="Coding">
+
+                    </a>
+
+                    <div class="card-body">
+                        <h5 class="card-title">จาวา</h5>
+                        <p class="card-text">มาเรียนกับเรากันเถอะ</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    </div>
+
+                </div>
+                </div>
+            </section>
+
+            <!--=========================================================================================================-->
+            <section class="col-12 col-sm-6 col-md-4 p-2 work ">
+
+            <div class="projects_item">
+
+                <div class="card h-100  ">
+
+                    <a href="#" class="warpper-card-img  ">
+
+                        <img class="card-img-top  " src="{{asset('assets/frontend/img/projects/p3.png')}}" alt="Coding">
+
+                    </a>
+
+                    <div class="card-body">
+                        <h5 class="card-title">ภาษา ซี </h5>
+                        <p class="card-text">มาเรียนกับเรากันเถอะ</p>
+                    </div>
+
+                    <div class="p-3">
+                        <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    </div>
+                  </div>
+
+                </div>
+            </section>
+            <!--=========================================================================================================-->
+            <section class="col-12 col-sm-6 col-md-4 p-2 web ">
+
+            <div class="projects_item">
+
+                <div class="card h-100  ">
+
+                    <a href="#" class="warpper-card-img  ">
+                        <img class=" card-img-top " src="{{asset('assets/frontend/img/projects/p4.png')}}" alt="Coding">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">แอนดรอย</h5>
+                        <p class="card-text">มาเรียนกับเรากันเถอะ</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <!--=========================================================================================================-->
+            <section class="col-12 col-sm-6 col-md-4 p-2  web ">
+
+            <div class="projects_item">
+
+                <div class="card h-100  ">
+                    <a href="#" class="warpper-card-img  ">
+                        <img class=" card-img-top " src="{{asset('assets/frontend/img/projects/p5.png')}}" alt="Coding">
+
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">ดีไซน์ ux/ui</h5>
+                        <p class="card-text">มาเรียนกับเรากันเถอะ</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    </div>
+ </div>
+                </div>
+            </section>
+            <!--=========================================================================================================-->
+            <section class="col-12 col-sm-6 col-md-4 p-2 brand web ">
+
+  <div class="projects_item">
+                <div class="card h-100   ">
+
+                    <a href="#" class="warpper-card-img  ">
 
 
+                        <img class=" card-img-top " src="{{asset('assets/frontend/img/projects/a.png')}}" alt="Coding">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">ลองๆเทรสๆๆ</h5>
+                        <p class="card-text">มาเรียนกับเรากันเถอะ</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-primary btn-block">อ่านเพิ่มเติม</a>
+                    </div>
 
-<!--================ END ข่าวสาร =================-->
+                </div>
 
+    </div>
+            </section>
 
+            <!--=========================================================================================================-->
+        </div>
 
-
-
+    </div>
 </section>
+
+
+<!--================ END Course =================-->
+
 <!--================  เส้นคั่น =================-->
 <br>
 <hr width=80% size=50 color=363636>
 
-
-
-
+<!--================ เส้นคั่น =================-->
 
 
 <!--================ to-top =================-->
