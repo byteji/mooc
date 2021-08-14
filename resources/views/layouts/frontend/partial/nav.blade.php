@@ -79,7 +79,7 @@
                 <div class="modal-footer">
                     <button class="btn btn-primary">เข้าสู่ระบบ</button>
                     <button class="btn btn-warning">ลืมรหัสผ่าน</button>
-                    <button class="btn btn-success">สมัครสมาชิก</button>
+                    <button class="btn btn-success">ลงทะเบียน </button>
                 </div>
             </div>
         </div>
