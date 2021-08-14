@@ -20,7 +20,31 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+ 
 
-Route::get('test', function () {
-    return view('test');
+Route::get('profile', function () {
+    return view('user-profile');
 });
+
+
+Route::get('my-subject', function () {
+    return view('user-subject');
+});
+ 
+
+
+Route::get('admin-user', function () {
+    return view('admin/user');
+});
+
+
+//route of admin user page
+Route::get('admin-subject', function () {
+    return view('admin/subject');
+});
+
+Route::get('admingetuser', 'UserController@admingetuser')->name('admingetuser');
+
+
+//route TestController
+Route::get('test', 'TTTTestController@test');

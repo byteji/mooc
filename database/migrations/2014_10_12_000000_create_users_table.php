@@ -29,6 +29,9 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
+            $table->string('status')->default('active')->nullable();
+
+
             $table->integer('role_id')->default('0')->nullable();
 
         });

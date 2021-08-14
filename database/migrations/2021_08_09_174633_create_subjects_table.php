@@ -20,6 +20,8 @@ class CreateSubjectsTable extends Migration
             $table->text('subject_description_2')->nullable();
             $table->text('subject_description_3')->nullable();
             $table->string('subject_image')->default('/images/null.svg');
+            $table->string('status')->default('active')->nullable();
+
             $table->timestamps();
         });
     }

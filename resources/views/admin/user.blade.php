@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'admin-subject')
+@section('title', 'admin-user')
 
 @section('content')
 
@@ -14,10 +14,13 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>titile subject</th>
-                    <th>Teacher</th>
-                    <th>Status</th>
+                    <th>titile</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>email</th>
+                    <th>Subject</th>
                     <th>created_at</th>
+                    <th>Status</th>
                     <th>action</th>
                 </tr>
             </thead>
@@ -97,6 +100,55 @@
 
 @push('page_script')
 <script>
+    $(document).ready(function()
+{
+    var table = $('#users_datatable').DataTable(
+    {
+      dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+           'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+        ],
+        
+        processing: true,
+        serverSide: true,
+        responsive: true,
+        
+        
+        "ajax": "{{route('admingetuser')}}", 
+        "columns": [
+        {
+        data: 'id',
+        name: 'id'
+        },
+        {
+        data: 'title',
+        name: 'title'
+        },
+        {
+        data: 'first_name',
+        name: 'first_name'
+        },
+        {
+        data: 'last_name',
+        name: 'last_name'
+        }, 
+        {
+        data: 'email',
+        name: 'email'
+        }, 
+        {
+        data: 'created_at',
+        name: 'created_at'
+        } ,
+        {
+        data: 'action',
+        name: 'action'
+        }],
+    });
+});
 
 </script>
 @endpush
