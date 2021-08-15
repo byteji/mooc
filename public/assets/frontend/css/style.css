@@ -282,6 +282,7 @@ header{
         padding: 20px 30px;
     }
 }
+
 /* Projects Area css
 ============================================================================================ */
 .projects_fillter .filter {
@@ -359,117 +360,106 @@ header{
 /* End Projects Area css
   ============================================================================================ */
 
-/* Section  subject  details  css
-============================================================================================ */
-.portfolio_details_inner .row {
+/* ========== Section  subject  details  css ====== */
+ 
+
+.subject_details_inner {
+    line-height: 26px;
+    font-weight: normal;
+    margin-top: 60px;
+
     margin-bottom: 65px;
 }
-.portfolio_details_inner p {
+.subject_details_inner p {
     margin-bottom: 30px;
     font-size: 14px;
+    
 }
-.portfolio_details_inner p:last-child {
+.details_left{
+      left: 20px;
+    }
+
+/* กรอบขวา */
+
+.details_right_content{
+position: relative;
+width: 380px;
+height: 330px;
+left: 90px;
+top: 0px;
+margin-bottom: 0px;
+background: #FFFFFF;
+border: 1px solid rgba(187, 187, 187, 0.7);
+box-sizing: border-box;
+border-radius: 20px;
+}
+/* ตาราง */
+
+.table_subject_details{
+position: absolute;
+width: 679px;
+height: 426px;
+left: 10px;
+top: 0px;
+}
+.table_subject_details table {
+
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table_subject_details  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .table_subject_details tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+
+/*  p:last-child = แท็ค p บรรทัดสุดท้าย  */
+.subject_details_inner p:last-child { 
     margin-bottom: 0px;
 }
-.portfolio_details_inner .portfolio_right_text {
-    padding-left: 98px;
+.subject_details_inner .subject_right_text {
+     padding-left: 48px;
 }
-.portfolio_details_inner .portfolio_right_text h4 {
+.subject_details_inner .subject_right_text h4 {
     color: #222222;
     font-size: 21px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
+   margin-bottom: 18px;
 }
-.portfolio_details_inner .portfolio_right_text p {
+.subject_details_inner .subject_right_text p {
     margin-bottom: 25px;
     font-size: 14px;
 }
-.portfolio_details_inner .portfolio_right_text .list li {
+.subject_details_inner .subject_right_text .list li {
     margin-bottom: 7px;
     color: #777777;
     font-weight: normal;
     font-size: 14px;
 }
-.portfolio_details_inner .portfolio_right_text .list li span {
+.subject_details_inner .subject_right_text .list li span {
     font-size: 14px;
     color: #222222;
     font-weight: 500;
     width: 97px;
     display: inline-block;
 }
-.portfolio_details_inner .portfolio_right_text .list li:last-child {
+
+.subject_details_inner .subject_right_text .list li:last-child {
     margin-bottom: 0px;
 }
-.portfolio_details_inner .portfolio_right_text .list li i {
-    color: #f1cd09;
-}
+
+
+
+
 
 /* End Section  subject  details  css
 ============================================================================================ */
-
-/* Testimonials Area css
-============================================================================================ */
-.testimonials_area {
-    background: #f9f9ff;
-}
-.testimonials_area.testi_two {
-    background: #fff;
-}
-.testimonials_area.testi_two .testi_inner {
-    margin-top: -20px;
-    margin-bottom: -20px;
-}
-.testimonials_area.testi_two .owl-item {
-    padding: 20px 0px;
-}
-.testimonials_area.testi_two .testi_item {
-    background: #f9f9ff;
-    border-color: #f9f9ff;
-    transition: all 300ms linear 0s;
-}
-.testimonials_area.testi_two .testi_item:hover {
-    background: #fff;
-    border-color: #fff;
-    box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1);
-}
-
-.testi_inner .col-lg-3 {
-    vertical-align: middle;
-    align-self: center;
-}
-
-.test_title h2 {
-    color: #222222;
-    font-size: 36px;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-.test_title p {
-    margin-bottom: 0px;
-}
-
-.testi_item {
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
-    background: #fff;
-    padding: 40px 28px;
-}
-.testi_item p {
-    font-style: italic;
-}
-.testi_item h4 {
-    color: #222222;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-.testi_item a {
-    color: #ffc000;
-}
-
-/* End Testimonials Area css
-============================================================================================ */
-
 /* Section Footer */
 
 .semi-footer {

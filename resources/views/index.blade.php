@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 
-@section('title','Index')
+@section('title','index')
 
 @push('css')
 
@@ -188,18 +188,12 @@
 
 <!--================ ข่าวสาร =================-->
 <section class="container">
-
-        <div class="text-center">
-          
-                 <h2  class="border-short-bottom2  " >  ข่าวสารชาววิศวกรรมคอมสวนสุนันทา  </h2>
-                 <p >กิจกรรมสาขาวิศวกรรมคอมพิวเตอร์ </p>
-              
-
-        </div>
-      
-
-        <!-- <div class="row"> -->
-
+       <div class="text-center">
+          <h2  class="border-short-bottom2  " >  ข่าวสารชาววิศวกรรมคอมสวนสุนันทา  </h2>
+            <p >กิจกรรมสาขาวิศวกรรมคอมพิวเตอร์ </p>
+         </div>
+       <!-- <div class="row">  -->
+ 
 
 
  
@@ -207,29 +201,28 @@
 
 
 <!--================ END ข่าวสาร =================-->
-
-
-
-
-
 </section>
+
+
+
 <!--================  เส้นคั่น =================-->
 <br>
 <hr width=80% size=50 color=363636>
 
 
 
+  <!--================Footer Area =================---->
+    
+<!--================End Footer Area =================-->
 
 
-
+  
 <!--================ to-top =================-->
 <div class="to-top">
         <i class="fa fa-angle-up" aria-hidden="true"></i>
     </div>
 
-
-
-@endsection
+ 
 
 
 

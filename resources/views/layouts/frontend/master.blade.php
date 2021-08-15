@@ -84,10 +84,10 @@
 
     <!--================End Latest Blog Area =================-->
 
-    <!--================Footer Area =================-->
-    @include('layouts.frontend.partial.footer')
+  
+  <!--================Footer Area =================-->
+  @include('layouts.frontend.partial.footer')
     <!--================End Footer Area =================-->
-
 
 
 

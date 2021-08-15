@@ -22,11 +22,15 @@ Route::get('/', function () {
 });
 
 
+
+
 Auth::routes();
+
 
 Route::get('/home', function () {
     return view('home');
 });
+
 
 Route::get('test', function () {
     return view('test');

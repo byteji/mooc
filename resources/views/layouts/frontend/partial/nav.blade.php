@@ -15,27 +15,35 @@
              <div class="collapse navbar-collapse  nav-link  " id="navbarKey">
 
              <ul class="navbar-nav ml-auto text-center ">
-               <li class="nav-item   "  <?php echo $file_name == 'index' ? 'active': '' ?>" >
-                 <a class="nav-link"   href="{{ url('/') }}" > หน้าแรก <span class="sr-only">(current)</span></a>
-              </li>
-                <li class="nav-item" <?php echo $file_name == '#' ? 'active': '' ?> >
+               <li class="nav-item"  <?php echo $file_name ==  'index' ? 'active': '' ?>" >
 
-                  <a class="nav-link " href="about-us.html"> ครอสเรียน </a> </li>
-              <li class="nav-item dropdown"<?php echo $file_name == 'about-us' ? 'active': '' ?>"> 
-              
-                    <a class="nav-link dropdown-toggle  " href="##" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                 <a class="nav-link"   href="{{ url('/') }}" > หน้าแรก  <span class="sr-only">(current)</span></a>
+              </li>
+
+                <li class="nav-item" <?php echo $file_name == 'home' ? 'active': '' ?> >
+                      <a class="nav-link " href="{{url('/home')}}"> ครอสเรียน  </a> 
+                </li>
+
+                <li  class="nav-item"  >
+                    <a class="nav-link " href="http://www.ce.fit.ssru.ac.th/home"> ข่าวสาร  </a>
+                </li>  
+
+
+              <!-- <li class="nav-item dropdown" " > 
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"> ข่าวสาร </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#"> ข่าวสาร </a>
-                    </div>
-                </li>
+                    </div> 
+                </li> -->
 
                 <li class="nav-item" <?php echo $file_name == '#' ? 'active': '' ?> >
                     <a class="nav-link " href="about-us.html"> เกี่ยวกับเรา  </a>
                 </li> 
+                
                 </ul>
 
-                <ul class="navbar-nav ml-auto  "  >
+                <ul class="navbar-nav ml-auto " >
                    <li class="nav-item " >
                          <!-- <a href="{{route('login')}}" class="btn btn-outline-success my-2 my-sm-0" role="button">เข้าสู่ระบบ</a> -->
                     
@@ -43,7 +51,7 @@
                        <button id="btnSignin" class="btn btn-outline-success my-2 my-sm-0" type="button"> เข้าสู่ระบบ</button>
                   
                   <li class="nav-item ">
-                   <a href="{{route('login')}}">
+                   <a href="{{route('register')}}">
                       <button   type="submit"  class="btn btn-success my-2 my-sm-0 ">  ลงทะเบียน </button></li>
                     </a>
                 </ul>
