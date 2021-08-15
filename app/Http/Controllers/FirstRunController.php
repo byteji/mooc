@@ -23,25 +23,48 @@ class FirstRunController extends Controller {
 
         echo 'creating roles';
         echo '<br>';
-        //create permission
+        //create role start
         $roles = [
             'admin',
             'student',
             'teacher',
-         ];
+        ];
 
-         foreach ( $roles as $role ) {
-             Role::create( ['name' => $role] );
-         }
+        foreach ( $roles as $role ) {
+            Role::create( ['name' => $role] );
+        }
+        //create role end
 
         echo 'created roles success';
+        echo '<br>';
+        echo '<br>';
+
+        //create permission start
+        echo 'creating permissions';
+        echo '<br>';
+
+        $permissions = [
+            'active',
+            'inactive',
+            'waiting',
+        ];
+
+        foreach ( $permissions as $permission ) {
+            Permission::create( ['name' => $permission] );
+        }
+
+        //create permissions end
+        echo 'created permissions success';
         echo '<br>';
         echo '<br>';
 
         echo 'creating admin';
         echo '<br>';
 
+        //create admin start
+
         $role = Role::where( 'name', 'Admin' )->first();
+        
         $user = User::create( [
             'name' => 'webadminister',
             'email' => 'webadminister@mail.com',
@@ -50,6 +73,8 @@ class FirstRunController extends Controller {
         ] );
 
         $user->assignRole( [$role->id] );
+        $user->givePermissionTo('active');
+        //create admin end
 
         echo 'created admin success';
         echo '<br>';
