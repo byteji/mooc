@@ -64,7 +64,7 @@ class FirstRunController extends Controller {
         //create admin start
 
         $role = Role::where( 'name', 'Admin' )->first();
-        
+
         $user = User::create( [
             'name' => 'webadminister',
             'email' => 'webadminister@mail.com',
@@ -73,7 +73,7 @@ class FirstRunController extends Controller {
         ] );
 
         $user->assignRole( [$role->id] );
-        $user->givePermissionTo('active');
+        $user->givePermissionTo( 'active' );
         //create admin end
 
         echo 'created admin success';
