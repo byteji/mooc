@@ -90,11 +90,11 @@ class UserController extends Controller {
         //
     }
 
-    public function admin_index( User $user ) {
+    public function admin_user_index( User $user ) {
         //
         $query_permission_status = $this->queryPermissionStatus();
 
-        return view( 'admin/user/user', compact( 'query_permission_status' ) );
+        return view( 'backend/admin/user/user', compact( 'query_permission_status' ) );
 
     }
 
@@ -106,12 +106,15 @@ class UserController extends Controller {
 
         return datatables()
         ->of( $query )  
+        //edit created_at time format
         ->editColumn('created_at', function ($request) {
             return $request->created_at->toDateTimeString();
         })
+        //edit updated_at time format
         ->editColumn('updated_at', function ($request) {
             return $request->updated_at->toDateTimeString();
         })
+        //add action button with id
         ->addIndexColumn()
         ->setRowId( '{{$id}}' )
         ->addColumn( 'action', '' )
