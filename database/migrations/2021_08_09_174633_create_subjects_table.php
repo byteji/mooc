@@ -22,7 +22,7 @@ class CreateSubjectsTable extends Migration
             $table->text('subject_description_3')->nullable();
             $table->string('subject_image')->default('/images/null.svg');
             $table->string('subject_video_intro')->default('/video/null.mp4');
-            $table->string('status')->default('active')->nullable();
+            // $table->string('status')->default('active')->nullable();
 
             $table->timestamps();
         });

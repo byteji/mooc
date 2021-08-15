@@ -18,8 +18,8 @@ class CreateSubjectSeriesTable extends Migration
             $table->unsignedBigInteger('id_subjects');
             $table->string('subject_series_title');
             $table->string('subject_series_status');
-            $table->integer('number_ students');
-            $table->integer('number_ students_max');
+            $table->integer('number_students');
+            $table->integer('number_students_max');
             $table->timestamps();
         });
     }
