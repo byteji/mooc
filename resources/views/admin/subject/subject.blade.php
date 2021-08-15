@@ -13,23 +13,23 @@
         <h4>Users</h4>
     </div>
     <div class="container mt-3  table-responsive ">
-        <table class="table table-striped text-center " id="users_datatable">
+        <table class="table table-striped text-center " id="datatable1">
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>titile</th>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>email</th>
-                    <th>Subject</th>
-                    <th>created_at</th>
+                    <th>titile subject</th>
+                    <th>Teacher</th>
                     <th>Status</th>
+                    <th>created_at</th>
+                    <th>created_at</th>
+                    <th>created_at</th>
+                    <th>created_at</th>
                     <th>action</th>
                 </tr>
             </thead>
         </table>
     </div>
-</div> 
+</div>
 
 @endsection
 
@@ -37,7 +37,7 @@
 <script>
     $(document).ready(function()
 {
-    var table = $('#users_datatable').DataTable(
+    var table = $('#datatable1').DataTable(
     {
       dom: 'Bfrtip',
         buttons: [
@@ -51,28 +51,27 @@
         serverSide: true,
         responsive: true,
         
-        
-        "ajax": "{{route('admingetuser')}}", 
+        "ajax": "{{route('admingetsubject')}}", 
         "columns": [
         {
         data: 'id',
         name: 'id'
         },
         {
-        data: 'title',
-        name: 'title'
+        data: 'subject_title',
+        name: 'subject_title'
         },
         {
-        data: 'first_name',
-        name: 'first_name'
+        data: 'subject_description_1',
+        name: 'subject_description_1'
         },
         {
-        data: 'last_name',
-        name: 'last_name'
+        data: 'subject_description_2',
+        name: 'subject_description_2'
         }, 
         {
-        data: 'email',
-        name: 'email'
+        data: 'subject_description_3',
+        name: 'subject_description_3'
         }, 
         {
         data: 'created_at',

@@ -42,7 +42,7 @@
                     <label>description2*</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="type email's user">
                 </div>
-            </div> 
+            </div>
 
             <div class="col-6">
                 <div class="form-group">
@@ -52,15 +52,15 @@
                     </select>
                 </div>
             </div>
-            
+
             <div class="col-6">
                 <div class="form-group">
-                   <label>Status</label>
-                   <select class="form-control" id="user_status" name="user_status">
-                    
-                   </select>
+                    <label>Status</label>
+                    <select class="form-control" id="user_status" name="user_status">
+
+                    </select>
                 </div>
-             </div>
+            </div>
             <div class="col-12">
                 <div align='left' class=" text-black-50">*Password will be auto-generate and send to user's
                     e-mail
@@ -89,6 +89,44 @@
 
 @push('page_script')
 <script>
+    $(document).ready(function () {
+        console.log("started");
+    });
+
+    $('#user_form').on('submit', function (event) {
+        event.preventDefault();
+        var action_url = '';
+        if ($('#action').val() == 'Add') {
+            action_url = "{{ route('user.store') }}";
+        }
+        if ($('#action').val() == 'Edit') {
+        }
+
+        $.ajax(
+            {
+                url: action_url,
+                method: "POST",
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (data) {
+                    var html = '';
+                    if (data.errors) {
+                        html = '<div class="alert alert-danger">';
+                        for (var count = 0; count < data.errors.length; count++) {
+                            html += '<p>' + data.errors[count] + '</p>';
+                        }
+                        html += '</div>';
+                    }
+                    if (data.success) {
+                        html = '<div class="alert alert-success">' + data.success + '</div>';
+                        $('#users_datatable').DataTable().ajax.reload();
+                        clearInterval(myTimer);
+                        myTimer = setInterval(autocloseSpan, 1500);
+                    }
+                    $('#form_result').html(html); 
+                }
+            });
+    });
 
 </script>
 @endpush

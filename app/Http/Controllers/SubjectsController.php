@@ -114,7 +114,7 @@ class SubjectsController extends Controller
         ->addIndexColumn()
         ->setRowId( '{{$id}}' )
         ->addColumn( 'action', '' )
-        ->editColumn( 'action', 'layouts.action_column' )
+        ->editColumn( 'action', 'layouts.action_button.action_column' )
         ->toJson(); 
  
     }

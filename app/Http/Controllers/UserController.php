@@ -90,31 +90,50 @@ class UserController extends Controller {
         //
     }
 
-    public function admingetuser(Request $request ) {
-        
+    public function admin_index( User $user ) {
+        //
+        $query_permission_status = $this->queryPermissionStatus();
+
+        return view( 'admin/user/user', compact( 'query_permission_status' ) );
+
+    }
+
+    public function admingetuser( Request $request ) {
+
         $userid = Auth::user()->id;
-        $data = User::all();
+
+        $query = $this->queryDataUser();
+
         return datatables()
-        ->of( $data )
+        ->of( $query )  
+        ->editColumn('created_at', function ($request) {
+            return $request->created_at->toDateTimeString();
+        })
+        ->editColumn('updated_at', function ($request) {
+            return $request->updated_at->toDateTimeString();
+        })
         ->addIndexColumn()
         ->setRowId( '{{$id}}' )
         ->addColumn( 'action', '' )
-        ->editColumn( 'action', 'layouts.action_column' )
-        ->toJson(); 
+        ->editColumn( 'action', 'layouts.action_button.action_column' )
+        ->toJson();
+    }
+
+    private function queryDataUser() {
+
+        $data = User::leftJoin( 'roles', 'users.role_id', '=', 'roles.id' )
+
+        ->select( 'users.*', 'roles.name as role_id' );
+
+        return $data;
 
     }
-    
-    public function admingetstudent(Request $request ) {
-        
-        $userid = Auth::user()->id;
-        $data = User::where('role_id', '=', '1');
-        return datatables()
-        ->of( $data )
-        ->addIndexColumn()
-        ->setRowId( '{{$id}}' )
-        ->addColumn( 'action', '' )
-        ->editColumn( 'action', 'layouts.action_column' )
-        ->toJson(); 
 
+    private function queryPermissionStatus() {
+        $data = Permission::where( 'name', '=', 'active' )
+        ->where( 'name', '=', 'inactive', 'or' )->get();
+
+        return $data;
     }
+
 }

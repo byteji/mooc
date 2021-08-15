@@ -14,7 +14,6 @@
         <span id="form_result"></span>
         <form id="user_form" class=" form-horizontal" method="post">
             @csrf
-
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -27,16 +26,16 @@
                 </div>
                 <div class="col-12">
                     <div class="form-group">
-                        <label>subject series*</label>
+                        <label>subject title*</label>
                         <input type="text" class="form-control" id="username" name="username"
-                            placeholder="type name's user" disabled>
+                            placeholder="type name's user">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group">
-                        <label>subject title*</label>
+                        <label>subject series*</label>
                         <input type="text" class="form-control" id="username" name="username"
-                            placeholder="type name's user">
+                            placeholder="type name's user" disabled>
                     </div>
                 </div>
                 <div class="col-12">
@@ -66,7 +65,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="modal-footer">

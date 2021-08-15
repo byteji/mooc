@@ -25,7 +25,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
   
 Route::get('profile', function () {
-    return view('user-profile');
+    return view('fontend/user-profile');
 }); 
 
 Route::get('my-subject', function () {
@@ -34,24 +34,26 @@ Route::get('my-subject', function () {
   
 
 //route of admin user page
-Route::get('admin-user', function () {
-    return view('admin/user');
-});
+Route::get('admin-user', 'UserController@admin_index');
+
 Route::get('admingetuser', 'UserController@admingetuser')->name('admingetuser');
 //route of user create page
+
 Route::get('user-create', function () {
-    return view('admin/user-create');
+    return view('admin/user/user-create');
 });
+Route::post('user', 'UserController@store')->name('user.store');
+
 
 //route of admin subject page
 Route::get('admin-subject', function () {
-    return view('admin/subject');
+    return view('admin/subject/subject');
 });
 Route::get('admingetsubject', 'SubjectsController@admingetsubject')->name('admingetsubject');
 
 //route of subject create page
 Route::get('subject-create', function () {
-    return view('admin/subject-create');
+    return view('admin/subject/subject-create');
 });
  
 //route TestController
