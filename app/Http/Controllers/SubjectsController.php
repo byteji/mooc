@@ -5,6 +5,20 @@ namespace App\Http\Controllers;
 use App\Subjects;
 use Illuminate\Http\Request;
 
+
+use Auth;
+use DataTables;
+
+ 
+use App\User;
+ 
+use Validator;
+use Hash;
+ 
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
+
 class SubjectsController extends Controller
 {
     /**
@@ -35,7 +49,15 @@ class SubjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $result = Subjects::create([
+            'subject_title' => 'subject -1',
+            'subject_description_1' => 'subject_description_1',
+            'subject_description_2' => 'subject_description_2',
+            'subject_description_3' => 'subject_description_3',
+            'status' => 'waiting',
+        ]);
+
     }
 
     /**
@@ -81,5 +103,19 @@ class SubjectsController extends Controller
     public function destroy(Subjects $subjects)
     {
         //
+    }
+
+    public function admingetsubject(Request $request) {
+        
+        $userid = Auth::user()->id;
+        $data = Subjects::all();
+        return datatables()
+        ->of( $data )
+        ->addIndexColumn()
+        ->setRowId( '{{$id}}' )
+        ->addColumn( 'action', '' )
+        ->editColumn( 'action', 'layouts.action_column' )
+        ->toJson(); 
+ 
     }
 }

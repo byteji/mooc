@@ -103,4 +103,18 @@ class UserController extends Controller {
         ->toJson(); 
 
     }
+    
+    public function admingetstudent(Request $request ) {
+        
+        $userid = Auth::user()->id;
+        $data = User::where('role_id', '=', '1');
+        return datatables()
+        ->of( $data )
+        ->addIndexColumn()
+        ->setRowId( '{{$id}}' )
+        ->addColumn( 'action', '' )
+        ->editColumn( 'action', 'layouts.action_column' )
+        ->toJson(); 
+
+    }
 }
