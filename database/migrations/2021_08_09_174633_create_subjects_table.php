@@ -15,11 +15,13 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
+            $table->integer('subject_code');
             $table->string('subject_title');
             $table->text('subject_description_1')->nullable();
             $table->text('subject_description_2')->nullable();
             $table->text('subject_description_3')->nullable();
             $table->string('subject_image')->default('/images/null.svg');
+            $table->string('subject_video_intro')->default('/video/null.mp4');
             $table->string('status')->default('active')->nullable();
 
             $table->timestamps();
