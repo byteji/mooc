@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 
-@section('title','index')
+@section('title','Index')
 
 @push('css')
 
@@ -212,7 +212,7 @@
 
 
   <!--================Footer Area =================---->
-    
+  
 <!--================End Footer Area =================-->
 
 

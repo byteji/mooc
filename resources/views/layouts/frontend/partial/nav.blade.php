@@ -38,7 +38,7 @@
                 </li> -->
 
                 <li class="nav-item" <?php echo $file_name == '#' ? 'active': '' ?> >
-                    <a class="nav-link " href="about-us.html"> เกี่ยวกับเรา  </a>
+                    <a class="nav-link " href=" "> เกี่ยวกับเรา  </a>
                 </li> 
                 
                 </ul>
