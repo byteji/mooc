@@ -148,9 +148,10 @@
                                                 <div class="table-responsive-xl">
                                                     <table class="table table-hover" id="subject">
                                                         <thead>
-                                                            <tr>
-                                                                <th>รายละเอียดวิชา</th>
-                                                                <th>ราคาขาย</th>
+                                                        <tr>
+                                                            <th>รายละเอียดวิชา</th>
+                                                                <th>รุ่นที่</th>
+                                                                <th>ที่นั่งเหลือ</th>
                                                                 <th>ดำเนินการ</th>
                                                             </tr>
                                                         </thead>
@@ -167,15 +168,13 @@
                                     <div class="table-responsive-xxl">
                                         <table class="table table-hover" id="orders">
                                             <thead>
-                                                <tr class="text-center">
-                                                    <th style="width: 3%;">รหัสวิชา</th>
-                                                    <th style="width: 15%;">รูปภาพ</th>
-                                                    <th style="width: 50%;">รายละเอียด</th>
+                                            <tr class="text-center">
+                                                    <th style="width: 8%;">รหัสวิชา</th>
+                                                    <th style="width: 10%;">รูปภาพ</th>
+                                                    <th style="width: 40%;">รายละเอียด</th>
                                                     <th style="width: 5%;">จำนวน</th>
-                                                    <th style="width: 8%;">ราคาขาย</th>
-                                                    <th style="width: 8%;">ส่วนลด</th>
-                                                    <th style="width: 8%;">รวมเป็นเงิน</th>
-                                                    <th style="width: 3%;">จัดการ</th>
+                                                    <th style="width: %;">รุ่นที่</th>
+                                                   
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -183,26 +182,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="row justify-content-end">
-                                        <div class="col-md-6 col-lg-5 col-xl- text-right">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                <tr>
-                                                    <th>รวมเป็นเงิน</th>
-                                                    <td>0</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>ส่วนลดทั้งหมด</th>
-                                                    <td>0</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>จำนวนเงินรวมทั้งสิ้น</th>
-                                                    <td>0</td>
-                                                </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
+                                  
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary btn-block mx-auto w-50" name="submit">บันทึกข้อมูล</button>
@@ -298,14 +278,13 @@
             orders.empty();
             arrOrders.forEach(function (item, index){
                 orders.append(`<tr>
-                    <td> <a href="../subject/" class="btn btn-outline-primary p-1"> ${item.p_id} </a> </td>
+                <td> <a href="../subject/" class="btn btn-outline-primary p-1"> ${item.p_id} </a> </td>
                     <td> <img src="${item.p_image}" class="w-150p d-block mx-auto"> </td>
                     <td> <p class="detail"> ${item.p_name}</p> </td>
                     <td> <input type="text" class="form-control rtl w-60p" value="${item.p_amount}"> </td>
                     <td> <p class="p-2 pl-4 text-right bg-light rounded-lg">${item.p_total}</p> </td>
-                    <td> <input type="text" class="form-control rtl w-90p" value="0"> </td>
-                    <td> <p class="p-2 pl-4 text-right bg-secondary rounded-lg">${item.price}</p> </td>
-                    <td> 
+
+                   <td> 
                         <button type="button" class="btn btn-danger" id="delete${index}">
                             <i class="far fa-trash-alt"></i>
                         </button>
