@@ -1,30 +1,23 @@
-@extends('layouts.app')
+<html lang="en">
 
-@section('title', 'test')
+<head>
+    <meta charset="UTF-8">
+    <title>Summernote with Bootstrap 4</title>
+   
+</head>
 
-@section('content')
-  
-<div class="container mt-3 shadow-lg p-3 mb-3 bg-white rounded-lg">
-    <table id="example" class="table table-borderless" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-    </table>
-</div>
- 
-@endsection
+<body>
+    <div id="summernote"></div>
 
-@push('page_script')
-<script>
-    $(document).ready(function() {
-    $('#example').DataTable();
-} );
-</script>
-@endpush
+
+
+    <script>
+        $('#summernote').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
+</body>
+
+</html>

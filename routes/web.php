@@ -71,13 +71,17 @@ Route::get('my-subject', function () {
 
 //route of admin subject 
 //-----view page function
-Route::get('admin-subject', 'SubjectsController@admin_subject_index')->name('admin_subject_index');
+Route::get('admin-subject', 'backend\admin\subject\AdminSubjectController@admin_subject_index')->name('admin_subject_index');
 //-----call get,post function
-Route::get('admingetsubject', 'SubjectsController@admingetsubject')->name('admingetsubject');
+Route::get('admingetsubject', 'backend\admin\subject\AdminSubjectController@admingetsubject')->name('admingetsubject');
 
  
 //route of subject create 
-Route::get('subject-create', 'SubjectsController@admin_create_subject_index')->name('admin_create_subject_index');
+Route::get('admin-subject-create', 'backend\admin\subject\AdminSubjectController@admin_create_subject_index')->name('admin_create_subject_index');
+
+Route::get('admin-subject-teacher-manage', 'backend\admin\subject\AdminSubjectController@admin_subject_teacher_manage_index')->name('admin_subject_manage_index');
+
+
 //----------**********----------//
 
  
@@ -114,6 +118,9 @@ Route::post('user', 'UserController@store')->name('user.store');
 //-----view page function
 Route::get('test', 'TTTTestController@test');
 
+
 //-----call get,post function
 Route::get('test_create_subject', 'TTTTestController@test_create_subject');
+Route::get('test_create_teachers_subject', 'TTTTestController@test_create_teachers_subject'); 
+Route::get('test_create_student', 'TTTTestController@test_create_student');
 //----------**********----------//

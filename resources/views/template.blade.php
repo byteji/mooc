@@ -9,6 +9,18 @@
 </div>
 @endsection
 
+@section('content_hidden')
+
+@endsection
+
+@push('page_css_call')
+
+@endpush
+
+@push('page_script_call')
+
+@endpush
+
 @push('page_script')
 <script>
 
