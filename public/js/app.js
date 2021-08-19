@@ -19378,7 +19378,9 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // require('../library template/AdminLTE-3.1.0/dist/js/adminlte.js');
+// require('../library template/AdminLTE-3.1.0/build/js/AdminLTE');
+// require('../../node_modules/admin-lte/build/js/AdminLTE');
 
 /***/ }),
 
