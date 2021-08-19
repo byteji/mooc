@@ -7,7 +7,6 @@
 @endpush
 
 @section('content')
-<!--================End Home ส่วนรูป =================-->
 
 <!-- Section Carousel -->
 <div class="container">
@@ -57,12 +56,7 @@
 
 <!-- Section jumbotron -->
 <br>
-<!-- <section class="jumbotron  jumb  ">
-    <div class="container-fluid ">
-        <h1 class="">CE MOOC </h1>
-        <p class=""> เกิดจากอยากให้ทุกคนได้เรียนรู้  </p>
-    </div>
-</section> -->
+
 
 <div class="jumbotron jumb text-center" style ="padding-bottom: 20px;"  >
  		<div class="container-fluid">
@@ -211,18 +205,17 @@
 
 
 
-  <!--================Footer Area =================---->
-  
-<!--================End Footer Area =================-->
 
 
-  
+
 <!--================ to-top =================-->
 <div class="to-top">
         <i class="fa fa-angle-up" aria-hidden="true"></i>
     </div>
 
- 
+
+
+@endsection
 
 
 

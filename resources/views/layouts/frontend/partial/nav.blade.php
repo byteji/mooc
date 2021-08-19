@@ -45,15 +45,17 @@
 
                 <ul class="navbar-nav ml-auto " >
                    <li class="nav-item " >
-                         <!-- <a href="{{route('login')}}" class="btn btn-outline-success my-2 my-sm-0" role="button">เข้าสู่ระบบ</a> -->
+                         <a href="{{ route('login') }}" class="btn btn-outline-success my-2 my-sm-0" role="button">เข้าสู่ระบบ</a>
                     
                        <!-- <button id="btnSignin" type="submit" class= "btn btn-outline-success my-2 my-sm-0" >  เข้าสู่ระบบ </button></li> -->
-                       <button id="btnSignin" class="btn btn-outline-success my-2 my-sm-0" type="button"> เข้าสู่ระบบ</button>
-                  
+                       <!-- <button id="btnSignin" class="btn btn-outline-success my-2 my-sm-0" type="button"> เข้าสู่ระบบ</button>
+                   -->
+                   </li>
                   <li class="nav-item ">
                    <a href="{{route('register')}}">
                       <button   type="submit"  class="btn btn-success my-2 my-sm-0 ">  ลงทะเบียน </button></li>
                     </a>
+                    </li>
                 </ul>
 
                 </div>
@@ -63,7 +65,7 @@
 </nav>
   
     <!-- Section log in -->
-    <div id="modalSignin" class="modal fade">
+    <!-- <div id="modalSignin" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -91,5 +93,5 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>  -->
     <!-- Section log in -->

@@ -14,11 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 //run to create permission
-Route::get('/FirstRun', 'FirstRunController@run');
+
 
 
 Route::get('/', function () {
     return view('index');
+});
+
+Route::get('uu', function () {
+    return view('user_account');
 });
 
 
@@ -28,6 +32,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
   
+
 //route  user page
 Route::get('profile', function () {
     return view('fontend/user-profile');
@@ -40,7 +45,10 @@ Route::get('my-subject', function () {
   
 
 
-
+Route::get('admin', function () {
+    return view('admin');
+});
+  
 
 
 
@@ -54,21 +62,31 @@ Route::get('admingetuser', 'UserController@admingetuser')->name('admingetuser');
 //route of admin user create page
 
 Route::get('user-create', function () {
-    return view('admin/user/user-create');
+    return view('admin/pages/user/user-create');
 });
+
+Route::get('form--create', function () {
+    return view('admin/pages/user/form-create');
+});
+
+
+Route::get('users', function () {
+    return view('admin/pages/user/user');
+});
+
 
 Route::post('user', 'UserController@store')->name('user.store');
 
 //------------------ admin : subject  -------------------------------//
 //route of admin : subject page
 Route::get('admin-subject', function () {
-    return view('admin/subject/subject');
+    return view('admin/pages/subject/subject');
 });
 Route::get('admingetsubject', 'SubjectsController@admingetsubject')->name('admingetsubject');
 
 //route of  admin :  subject create page
 Route::get('subject-create', function () {
-    return view('admin/subject/subject-create');
+    return view('admin/pages/subject/subject-create');
 });
  
 
